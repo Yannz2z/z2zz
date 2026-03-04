@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html lang en>
+<head>
+  <meta charset="UTF-8">
+  <title> z2z</title>
+
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+   
+   
+   .rgb-text {
+     font-size: 25px;
+     font-weight: bold;
+     background: linear-gradient(
+       90deg,
+       red,
+       black,
+       red
+     );
+     background-size: 50% 5%;
+     color: transparent;
+     background-clip: text;
+     -webkit-background-clip: text;
+     animation: rgb 4s linear infinite;
+    }
+  
+  
+    @keyframes rgb {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+.rgb-text-2 {
+  font-size: 25px;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    black,
+    red,
+    red,
+    black
+  );
+  background-size: 30% 10%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: rgb2 24s linear infinite;
+}
+
+@keyframes rgb2 {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.rgb-text-3 {
+  font-size: 25px;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    yellow,
+    orange,
+    white,
+    yellow
+  );
+  background-size: 30% 10%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: rgb2 6s linear infinite;
+}
+
+@keyframes rgb3 {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+     {
+      font-size: 15px;
+      color: white;
+    }
+
+.slide2 {
+  line-height: 2;
+}
+
+    img {
+      width: 120px;
+      margin: 12px 0;
+      border-radius: 10px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background-color: #000066;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #d30000;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #111;
+      color: white;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #ff4d4d;
+    }
+    html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.flying-right, .flying-left {
+    position: fixed;
+    white-space: nowrap;
+    font-weight: bold;
+    color: white;
+    pointer-events: none;
+    opacity: 0.3;
+        animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.flying-right { 
+  animation-name: flyRight; 
+}
+
+.flying-left { 
+  animation-name: flyLeft; 
+}
+
+
+    @keyframes flyRight {
+  0%   { transform: translateX(100vw); }
+  100% { transform: translateX(-120%); }
+}
+
+@keyframes flyLeft {
+  0%   { transform: translateX(-120%); }
+  100% { transform: translateX(100vw); }
+}
+
+
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: -5;
+}
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-btn {
+  margin-top: 40px;
+  padding: 12px 25px;
+  background: #00ccff;
+  color: black;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.next-btn:hover {
+  background: #ff00ff;
+  color: white;
+  
+  
+  background: #111;
+  font-family: Arial, sans-serif;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.menu {
+  width:100%;
+  max-width: 400px;
+  margin: 75px auto;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  background: #222;
+  opacity: 0.95;
+  padding: 8px 15px;
+  margin-bottom: 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 0 #FF2000;
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  transform: translateY(3px);
+  box-shadow: 0 0 10px red;
+  animation: glowRGB 3s linear infinite;
+}
+
+    @keyframes glowRGB {
+  0%   { box-shadow: 0 0 15px red; }
+  33%  { box-shadow: 0 0 15px black; }
+  66%  { box-shadow: 0 0 15px black; }
+  99% { box-shadow: 0 0 15px red; }
+  
+}
+
+.small-text {
+  font-size: 16px;
+}
+
+.icon {
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 20px;
+}
+.icon img {
+  width: 99%;
+}
+
+.title-box {
+  display: inline-block;
+  padding: 1px 30px;
+  margin-top: 30px;
+  background: black;
+  border-radius: 20px;
+}
+
+
+
+
+</style>
+
+          <div class="title-box">
+         <p class="rgb-text-2">Welcome</p>
+         </div>
+
+         <div class="flying-right" style="top:5%; animation-duration:2s;">━</div>
+         <div class="flying-right" style="top:20%; animation-duration:5s;">━━━━</div>
+         <div class="flying-right" style="top:30%; animation-duration:7s;">━━━━━</div>
+
+         <div class="flying-left" style="top:70%; animation-duration:2s;">━━</div>
+          <div class="flying-left" style="top:80%; animation-duration:6s;">━━━━━━</div>
+         <div class="flying-left" style="top:90%; animation-duration:8s;">━━━━━━━━━━</div>
+
+
+         <audio id="bg-music" autoplay loop muted>
+          <source src="yann.mp3" type="audio/mpeg">
+         </audio>
+
+
+         <video class="video-bg" autoplay muted loop playsinline>
+         <source src="yann.mp4" type="video/mp4">
+         </video>
+         <div class="menu">
+  
+          <a href="https://wa.me/6285282426298?text=*omm%20rodok%20aku%20omm*" class="menu-item">
+         <div class="icon">
+          <img src="wa.png">
+         </div>
+          <span class="rgb-text small-text">WhatsApp</span>
+          </a>
+
+         <a href="https://www.tiktok.com/@yannz2z10?_r=1&_t=ZS-94OzqPCiv5t" class="menu-item">
+         <div class="icon">
+         <img src="tt.png">
+         </div>
+           <span class="rgb-text small-text">TikTok</span>
+          </a>
+
+          <a href="https://chat.whatsapp.com/GoCxOS38hfhEsCse3K9ZPH" class="menu-item">
+         <div class="icon">
+          <img src="y1.png">
+         </div>
+         <span class="rgb-text small-text">Saluran</span>
+          </a>
+  
+          <a href="https://yannz2z.github.io/Yannz2z/#hi-there-" class="menu-item">
+         <div class="icon">
+         <img src="3.png">
+         </div>
+          <span class="rgb-text small-text">Web     Lain</span>
+          </a>
+          
+          <div class="section slide2">
+  
+          <p class="rgb-text">[]</p>
+         </div>
+
+         
+         <footer>
+          <h1 style="color: red;">━━━━━━</h1>
+          <div class="slide2">
+            
+          <h1 class="rgb-text-3">#yannz2z$</h1>
+          
+          
+          |    <a href="#">Back To Top</a>    |
+          |    <a href="#"></a>
+         </footer>
+  
+         <img src="jir.png" alt="foto">
+          
+          <script>document.addEventListener("click", function () {
+          const music = document.getElementById("bg-music");
+          music.muted = false;
+          music.play();
+        }, { once: true });
+</script>
+</div>
+</html>
